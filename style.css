@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center; /* توسيط أفقي للعناصر داخل الـ body */
-    align-items: flex-start; /* توسيط رأسي للعناصر داخل الـ body */
+    align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
     background-color: #f0f0f0; /* لون خلفية خفيف */
@@ -11,7 +11,7 @@ body {
 
 /* قواعد الصورة: لتكون صغيرة وفي الأعلى وموسطة */
 #my-top-image {
-    width: 250px; /* حجم الصورة صغير (250 بكسل عرض) */
+    width: 200px; /* حجم الصورة صغير (200 بكسل عرض) */
     height: auto; /* للحفاظ على نسبة الأبعاد الصحيحة للصورة */
     display: block; /* لجعل الصورة عنصر كتلة لسهولة التوسيط */
     margin-left: auto; /* لتوسيطها أفقياً */
@@ -25,7 +25,7 @@ body {
 /* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
     color: black; /* لون الكلمة أسود */
-    font-size: 1em; /* حجم الخط أصغر */
+    font-size: 2em; /* حجم الخط أصغر */
     text-decoration: none; /* إزالة الخط السفلي من الرابط */
     transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
@@ -35,18 +35,10 @@ body {
 /* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
-  .highlight-text a:hover {
-    font-weight: bold; /* الخط يصبح عريضاً */
-    /* هذا هو الجزء الصحيح والوحيد لـ text-shadow */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1),
-        0 0 30px rgba(255, 255, 255, 0.8),
-        0 0 40px rgba(255, 255, 255, 0.6);
-    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-    color: black; /* اللون يبقى أسود عند التمرير */
-}
-    
-    
+        0 0 20px rgba(255, 255, 255, 1),   /* **الوميض الأبيض القوي** */
+        0 0 30px rgba(255, 255, 255, 0.8), /* **طبقة وميض بيضاء متوسطة** */
+        0 0 40px rgba(255, 255, 255, 0.6); /* **طبقة وميض بيضاء خفيفة** */
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
 }
