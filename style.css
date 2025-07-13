@@ -10,9 +10,10 @@ body {
     flex-direction: column;
 }
 
+
 .small-image {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* حجم الصورة مكبر قليلاً */
+    height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
     display: block;
@@ -22,6 +23,14 @@ body {
 
 h1, h2 {
     color: #000000; /* لون الخط أسود خالص */
-    font-size: 28px;
+    font-size: 18px; /* حجم الخط الأساسي */
     margin-bottom: 10px;
+    /* **هنا التعديل:** transition يجب أن يشمل كل من color و font-size ليكون الانتقال سلسًا في كليهما */
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* **هذا هو الجزء الخاص بالتأثير عند وضع الماوس (hover) - يجب أن يكون قاعدة منفصلة** */
+h1:hover, h2:hover {
+    color: #FFFF00; /* اللون الذي يتغير إليه الخط عند التمرير (أصفر فاقع) */
+    font-size: 20px; /* **هنا تم إضافة تكبير الحجم قليلاً عند التمرير** (20px أكبر من 18px) */
 }
