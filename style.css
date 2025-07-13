@@ -2,20 +2,33 @@ body {
     font-family: Arial, sans-serif;
     text-align: center; /* هذا سيقوم بتوسيط العناصر النصية والصور */
     color: #333;
-    margin: 0; /* تأكد أن لا يوجد هوامش إضافية */
-    padding: 20px; /* يمكن إضافة بعض البادئة لتبدو أفضل */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* لون خلفية خفيف */
 }
 
-/* هذه القواعد خاصة بالصورة التي أعطيتها ID "my-top-image" في HTML */
+/* هذه القواعد خاصة بالصورة */
 #my-top-image {
-    max-width: 100%; /* لضمان أنها لا تتجاوز عرض الشاشة */
+    width: 300px; /* جعل عرض الصورة 300 بكسل (اجعلها أصغر) */
     height: auto; /* للحفاظ على نسبة الأبعاد */
-    display: block; /* لجعلها تتصرف كعنصر كتلة وتسمح بـ margin: auto */
-    margin-left: auto; /* لتوسيطها أفقياً */
-    margin-right: auto; /* لتوسيطها أفقياً */
-    margin-bottom: 20px; /* إضافة مسافة أسفل الصورة */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* لإضافة حواف دائرية خفيفة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
+    transition: all 0.3s ease-in-out; /* لجعل أي تغييرات مستقبلية سلسة */
 }
 
+/* تأثير الوميض/التوهج عند وضع الماوس على العنوان الرئيسي H1 */
 h1 {
-    color: #007bff;
+    color: #007bff; /* اللون الأصلي */
+    font-size: 2.5em; /* حجم الخط */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* لجعل الانتقال سلساً */
+}
+
+h1:hover {
+    color: #ff9900; /* لون مختلف عند التوهج */
+    text-shadow: 0 0 15px rgba(255, 153, 0, 0.7); /* تأثير التوهج */
+    cursor: pointer; /* لتغيير شكل المؤشر إلى يد عند المرور فوقه */
 }
