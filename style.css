@@ -5,7 +5,7 @@ body {
     align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
-    background-color: #FFFFFF; /* لون خلفية خفيف */
+    background-color: #f0f0f0; /* لون خلفية خفيف */
     flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
 }
 
@@ -36,8 +36,8 @@ body {
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
     text-shadow: 
-        0 0 20px #FFFF00; ,   /* * الوميض الاصفر** */
-        0 0 30px #FFFF00;   
+        0 0 20px #007bff,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
+        0 0 30px #007bff;   
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
 }
