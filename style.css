@@ -5,7 +5,7 @@ body {
     align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
-    background-color: #FFFFFF; /* لون خلفية أبيض */
+    background-color: #f0f0f0; /* لون خلفية خفيف */
     flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
 }
 
@@ -25,8 +25,7 @@ body {
 /* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
     color: black; /* لون الكلمة أسود */
-    font-size: 2em; /* حجم الخط */
-    text-decoration: none; /* إزالة الخط السفلي من الرابط */
+    font-size: 2em; /* حجم الخط صغير */
     transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
     display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
@@ -35,30 +34,9 @@ body {
 /* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
-    text-shadow:
-        0 0 20px #FFFF00, /* إضاءة صفراء */
-        0 0 30px #FFFF00;
-    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-    color: black; /* اللون يبقى أسود عند التمرير */
-}
-
-/* قواعد تنسيق الجملة الثانية (اليكم الدليل) لتكون مطابقة شكلياً للجملة الأولى */
-#second-text {
-    color: black; /* نفس لون الكلمة الأولى (أسود) */
-    font-size: 2em; /* نفس حجم خط الكلمة الأولى */
-    font-family: 'Arial', sans-serif; /* نفس نوع الخط */
-    text-align: center; /* لتوسيطها أفقياً */
-    margin-top: 15px; /* لإعطاء مسافة من الكلمة الأولى */
-    transition: all 0.3s ease; /* لجعل الانتقالات سلسة */
-}
-
-/* تأثير عند تمرير الماوس فوق الجملة الثانية (مطابق لتأثير الكلمة الأولى عند التمرير) */
-#second-text:hover {
-    font-weight: bold; /* الخط يصبح عريضاً */
     text-shadow: 
-        0 0 20px #FFFF00, /* إضاءة صفراء */
-        0 0 30px #FFFF00;
+        0 0 20px #FFFF00; ,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
+        0 0 30px #FFFF00;   
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
-    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
 }
