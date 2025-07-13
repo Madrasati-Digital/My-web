@@ -25,7 +25,8 @@ body {
 /* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
     color: black; /* لون الكلمة أسود */
-    font-size: 2em; /* حجم الخط صغير */
+    font-size: 2em; /* حجم الخط أصغر */
+    text-decoration: none; /* إزالة الخط السفلي من الرابط */
     transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
     display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
@@ -35,7 +36,7 @@ body {
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
     text-shadow: 
-        0 0 20px #FFFF00; ,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
+        0 0 20px #FFFF00; ,   /* * الوميض الاصفر** */
         0 0 30px #FFFF00;   
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
