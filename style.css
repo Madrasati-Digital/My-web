@@ -10,6 +10,18 @@ body {
     flex-direction: column;
 }
 
+/* إذا كنت لا تريد المربع الأبيض، تأكد أن هذا الجزء محذوف أو معلق بالكامل */
+/*
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+*/
+
 .small-image {
     width: 120px; /* حجم الصورة مكبر قليلاً */
     height: 150px; /* حسب آخر تعديل طلبته */
@@ -20,15 +32,19 @@ body {
     margin-right: auto;
 }
 
+/* **هذا هو الجزء الخاص بالتنسيقات الأساسية لـ h1 و h2** */
 h1, h2 {
     color: #000000; /* لون الخط أسود خالص */
     font-size: 18px; /* حجم الخط الأساسي */
     margin-bottom: 10px;
-    /* transition يجب أن يشمل كل من font-size و box-shadow ليكون الانتقال سلسًا في كليهما */
-    transition: font-size 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* التعديل هنا: تسريع الانتقال إلى 0.15s وتضمين text-shadow */
+    transition: font-size 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
 }
 
+/* **هذا هو الجزء الخاص بالتأثير عند وضع الماوس (hover)** */
 h1:hover, h2:hover {
     font-size: 20px; /* تكبير الحجم قليلاً عند التمرير */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8); /* إضاءة زرقاء حول النص */
+    /* التعديل هنا: استخدام text-shadow للإضاءة حول الكلمة نفسها */
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* إضاءة زرقاء حول النص نفسه */
+    /* تم حذف box-shadow بالكامل */
 }
