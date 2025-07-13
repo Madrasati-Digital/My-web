@@ -5,7 +5,7 @@ body {
     align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
-    background-color: #FFFFFF; /* لون خلفية خفيف */
+    background-color: #FFFFFF; /* لون خلفية أبيض كما طلبته */
     flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
 }
 
@@ -25,7 +25,7 @@ body {
 /* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
     color: black; /* لون الكلمة أسود */
-    font-size: 1em; /* حجم الخط أصغر */
+    font-size: 2em; /* حجم الخط (تم التعديل ليكون 2em كما طلب سابقاً) */
     text-decoration: none; /* إزالة الخط السفلي من الرابط */
     transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
@@ -35,23 +35,23 @@ body {
 /* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
-text-shadow:
-    0 0 20px #FFFF00,
-    0 0 30px #FFFF00;
-    
+    text-shadow:
+        0 0 20px #FFFF00, /* إضاءة صفراء */
+        0 0 30px #FFFF00;
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
+}
 
-    /* قواعد تنسيق الجملة الثانية لتكون مطابقة شكلياً للجملة الأولى في حالتها العادية */
+/* **هذا هو الجزء الخاص بـ #second-text وقد تم إخراجه من داخل a:hover ** */
+/* قواعد تنسيق الجملة الثانية لتكون مطابقة شكلياً للجملة الأولى في حالتها العادية */
 #second-text {
     color: black; /* نفس لون الكلمة الأولى (اللون الأسود) */
     font-size: 2em; /* نفس حجم خط الكلمة الأولى */
     font-family: 'Arial', sans-serif; /* نفس نوع الخط لضمان التطابق الكامل */
     text-align: center; /* لتوسيطها أفقياً */
     margin-top: 15px; /* لإعطاء مسافة من الكلمة الأولى */
-        font-weight: bold; /* الخط يصبح عريضاً */
-text-shadow:
-    0 0 20px #FFFF00,
-    0 0 30px #FFFF00;
-}
+    font-weight: bold; /* الخط عريضاً بشكل دائم */
+    text-shadow:
+        0 0 20px #FFFF00, /* إضاءة صفراء دائمة */
+        0 0 30px #FFFF00;
 }
