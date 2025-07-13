@@ -1,41 +1,41 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: center; /* هذا سيقوم بتوسيط العناصر النصية والصور */
     color: #333;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* لون خلفية خفيف */
 }
 
 #my-top-image {
-    width: 300px;
-    height: auto;
+    width: 300px; /* جعل عرض الصورة 300 بكسل */
+    height: auto; /* للحفاظ على نسبة الأبعاد */
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    border-radius: 10px; /* لإضافة حواف دائرية خفيفة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
+    transition: all 0.3s ease-in-out; /* لجعل أي تغييرات مستقبلية سلسة */
 }
 
 a {
-    text-decoration: none; /* هذا السطر لإزالة الخط السفلي */
-    color: inherit;
+    text-decoration: none; /* لإزالة الخط السفلي */
+    color: inherit; /* لجعل لون الرابط يأخذ لون العنصر الأب (h1 في هذه الحالة) */
 }
 
 h1 {
     color: #007bff; /* هذا هو اللون الأزرق الأصلي */
-    font-size: 2.5em;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    font-size: 2.5em; /* حجم الخط */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, font-weight 0.3s ease-in-out; /* لتطبيق انتقال سلس لتغير اللون والظل وسمك الخط */
 }
 
 h1:hover {
-    color: #007bff; /* اللون يبقى نفسه كما طلبت */
+    color: #007bff; /* اللون يبقى نفسه عند التمرير */
     font-weight: bold; /* الخط يصبح عريضاً */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1), /* طبقة وميض بيضاء قوية */
+        0 0 20px rgba(255, 255, 255, 1),   /* وميض أبيض واضح وقوي */
         0 0 30px rgba(255, 255, 255, 0.8), /* طبقة وميض بيضاء متوسطة */
         0 0 40px rgba(255, 255, 255, 0.6); /* طبقة وميض بيضاء خفيفة */
-    cursor: pointer;
+    cursor: pointer; /* لتغيير شكل المؤشر إلى يد عند المرور فوقه */
 }
