@@ -1,57 +1,20 @@
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center; /* توسيط أفقي للعناصر داخل الـ body */
-    align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
-    min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
-    margin: 0;
-    background-color: #FFFFFF; /* لون خلفية أبيض كما طلبته */
-    flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
+/* قواعد تنسيق الجملة الثانية (اليكم الدليل) لتكون مطابقة شكلياً للجملة الأولى */
+#second-text {
+    color: black; /* نفس لون الكلمة الأولى (أسود) */
+    font-size: 2em; /* نفس حجم خط الكلمة الأولى */
+    font-family: 'Arial', sans-serif; /* نفس نوع الخط */
+    text-align: center; /* لتوسيطها أفقياً */
+    margin-top: 15px; /* لإعطاء مسافة من العنصر الذي فوقها */
+    transition: all 0.3s ease; /* لجعل الانتقالات سلسة عند التمرير */
 }
 
-/* قواعد الصورة: لتكون صغيرة وفي الأعلى وموسطة */
-#my-top-image {
-    width: 200px; /* حجم الصورة صغير (200 بكسل عرض) */
-    height: auto; /* للحفاظ على نسبة الأبعاد الصحيحة للصورة */
-    display: block; /* لجعل الصورة عنصر كتلة لسهولة التوسيط */
-    margin-left: auto; /* لتوسيطها أفقياً */
-    margin-right: auto; /* لتوسيطها أفقياً */
-    margin-bottom: 20px; /* مسافة أسفل الصورة */
-    border-radius: 10px; /* حواف دائرية خفيفة للصورة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
-    transition: all 0.3s ease-in-out; /* حركة سلسة لأي تغييرات */
-}
-
-/* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
-.highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
-    color: black; /* لون الكلمة أسود */
-    font-size: 2em; /* حجم الخط (تم التعديل ليكون 2em كما طلب سابقاً) */
-    text-decoration: none; /* إزالة الخط السفلي من الرابط */
-    transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
-    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
-    display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
-}
-
-/* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
-.highlight-text a:hover {
+/* تأثير عند تمرير الماوس فوق الجملة الثانية (مطابق لتأثير الكلمة الأولى عند التمرير) */
+#second-text:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
-    text-shadow:
-        0 0 20px #FFFF00, /* إضاءة صفراء */
+    text-shadow: 
+        0 0 20px #FFFF00, /* إضاءة صفراء (نفس لون الوميض في الكلمة الأولى) */
         0 0 30px #FFFF00;
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
-}
-
-/* **هذا هو الجزء الخاص بـ #second-text وقد تم إخراجه من داخل a:hover ** */
-/* قواعد تنسيق الجملة الثانية لتكون مطابقة شكلياً للجملة الأولى في حالتها العادية */
-#second-text {
-    color: black; /* نفس لون الكلمة الأولى (اللون الأسود) */
-    font-size: 2em; /* نفس حجم خط الكلمة الأولى */
-    font-family: 'Arial', sans-serif; /* نفس نوع الخط لضمان التطابق الكامل */
-    text-align: center; /* لتوسيطها أفقياً */
-    margin-top: 15px; /* لإعطاء مسافة من الكلمة الأولى */
-    font-weight: bold; /* الخط عريضاً بشكل دائم */
-    text-shadow:
-        0 0 20px #FFFF00, /* إضاءة صفراء دائمة */
-        0 0 30px #FFFF00;
+    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
 }
