@@ -7,7 +7,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* هذه القواعد خاصة بالصورة */
 #my-top-image {
     width: 300px;
     height: auto;
@@ -20,25 +19,21 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* تنسيق الرابط الذي يحيط بالـ H1 */
 a {
-    text-decoration: none; /* لإزالة الخط التلقائي تحت الرابط */
-    color: inherit; /* لجعل لون الرابط يأخذ لون العنصر الذي يحيط به (في حالتنا H1) */
+    text-decoration: none; /* هذا السطر لإزالة الخط السفلي */
+    color: inherit;
 }
 
-/* قواعد العنوان الرئيسي H1 */
 h1 {
-    color: #007bff; /* اللون الأصلي للعنوان */
+    color: #007bff; /* هذا هو اللون الأزرق الأصلي */
     font-size: 2.5em;
-    /* لتطبيق انتقال سلس لتغير اللون والظل وسمك الخط */
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 }
 
-/* تأثيرات عند تمرير الماوس فوق العنوان H1 */
 h1:hover {
-    color: #007bff; /* اللون يبقى نفسه كما طلبت */
-    font-weight: bold; /* الخط يصبح عريضاً */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), /* وميض أبيض واضح */
-                 0 0 25px rgba(255, 255, 255, 0.6); /* طبقة وميض إضافية */
-    cursor: pointer; /* لتغيير شكل المؤشر إلى يد */
+    color: #007bff; /* هذا السطر يضمن أن اللون يبقى أزرق عند التمرير */
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                 0 0 25px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
