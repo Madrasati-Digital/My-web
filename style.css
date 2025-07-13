@@ -3,11 +3,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* يجعل الصفحة تأخذ ارتفاع الشاشة بالكامل */
+    min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4; /* لون خلفية خفيف */
-    text-align: center; /* لضمان توسيط النصوص */
-    flex-direction: column; /* لترتيب العناصر عموديا */
+    background-color: #FFFFFF; /* لون خلفية أبيض */
+    text-align: center;
+    flex-direction: column;
+    /* يمكنك إضافة حجم ولون خط افتراضي هنا لكل الـ body إذا أردت */
+    /* font-size: 16px; */
+    /* color: #333; */
 }
 
 .container {
@@ -15,29 +18,31 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* تحديد أقصى عرض للحاوية */
-    width: 90%; /* تجعل الحاوية متجاوبة */
+    max-width: 400px;
+    width: 90%;
 }
 
 .small-image {
-    width: 100px; /* حجم صغير للصورة */
-    height: 100px; /* حجم صغير للصورة */
-    /* إذا كنت تريدها دائرية، أزل التعليق عن السطر التالي */
+    width: 100px;
+    height: 100px;
     /* border-radius: 50%; */
-    object-fit: cover; /* لضمان أن الصورة تملأ المساحة دون تشوه */
-    margin-bottom: 20px; /* مسافة تحت الصورة */
-    display: block; /* لجعل الصورة تأخذ سطر خاص بها */
-    margin-left: auto; /* لتوسيط الصورة */
-    margin-right: auto; /* لتوسيط الصورة */
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
-    color: #333;
+    color: #333; /* لون عنوان رئيسي أغمق */
     margin-bottom: 10px;
+    font-size: 28px; /* **هنا تم إضافة حجم الخط للعناوين الكبيرة** */
+    /* font-weight: bold; */ /* هذا افتراضي للـ h1 لكن يمكنك تحديده */
 }
 
 p {
-    color: #666;
+    color: #666; /* لون نص الفقرة أفتح قليلاً */
     line-height: 1.5;
     margin-bottom: 5px;
+    font-size: 18px; /* **هنا تم إضافة حجم الخط للفقرات** */
 }
