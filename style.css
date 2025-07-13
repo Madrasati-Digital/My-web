@@ -26,7 +26,7 @@ body {
 
     color: black; /* اللون الأزرق الجميل الافتراضي للرابط */
 
-    font-size: 3em; /* حجم الخط للرابط */
+    font-size: 2em; /* حجم الخط للرابط */
 
     text-decoration: none; /* إزالة التسطير الافتراضي للروابط */
 
@@ -36,6 +36,18 @@ body {
 
     display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
 
+}
+
+#my-top-image {
+    width: 200px; /* حجم الصورة هنا 200 بكسل */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .highlight-text a:hover {
