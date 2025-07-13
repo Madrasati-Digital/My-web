@@ -10,18 +10,6 @@ body {
     flex-direction: column;
 }
 
-/* إذا كنت لا تريد المربع الأبيض، تأكد أن هذا الجزء محذوف أو معلق بالكامل */
-/*
-.container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 90%;
-}
-*/
-
 .small-image {
     width: 120px; /* حجم الصورة مكبر قليلاً */
     height: 150px; /* حسب آخر تعديل طلبته */
