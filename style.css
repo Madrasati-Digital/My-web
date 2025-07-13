@@ -5,40 +5,38 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
-    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4; /* لون خلفية خفيف */
+    flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً */
 }
 
-/* قواعد الصورة */
+/* قواعد الصورة: لتكون صغيرة وفي الأعلى وموسطة */
 #my-top-image {
-    width: 300px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    width: 300px; /* حجم الصورة صغير (300 بكسل عرض) */
+    height: auto; /* للحفاظ على نسبة الأبعاد الصحيحة للصورة */
+    display: block; /* لجعل الصورة عنصر كتلة لسهولة التوسيط */
+    margin-left: auto; /* لتوسيطها أفقياً */
+    margin-right: auto; /* لتوسيطها أفقياً */
+    margin-bottom: 20px; /* مسافة أسفل الصورة */
+    border-radius: 10px; /* حواف دائرية خفيفة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
+    transition: all 0.3s ease-in-out; /* حركة سلسة لأي تغييرات */
 }
 
-/* قواعد الرابط <a> الذي يحمل كلاس highlight-text */
+/* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text {
-    text-decoration: none; /* لإزالة الخط السفلي من الرابط */
-    color: black; /* لون الكلمة أسود (اللون الأساسي) */
-    font-size: 2.5em; /* حجم الخط للكلمة */
-    transition: font-weight 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out; /* انتقال سلس لجميع التأثيرات */
-    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
-    display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
+    color: #007bff; /* اللون الأزرق الجميل الافتراضي للرابط (من الكود الأول) */
+    font-size: 2.5em; /* حجم الخط للكلمة (تم تعديله ليتناسب مع الكود السابق) */
+    text-decoration: none; /* إزالة التسطير الافتراضي للروابط (من الكود الأول) */
+    transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير (من الكود الأول) */
+    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير (من الكود الأول) */
+    display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح (من الكود الأول) */
 }
 
-/* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
+/* تأثير عند تمرير الماوس فوق الكلمة (الرابط) - طبقاً لـ "الكود الأول" بالضبط */
 .highlight-text:hover {
-    font-weight: bold; /* الخط يصبح عريضاً */
-    text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1),   /* إضاءة بيضاء قوية (الوميض) */
-        0 0 30px rgba(255, 255, 255, 0.8), /* طبقة إضاءة بيضاء متوسطة */
-        0 0 40px rgba(255, 255, 255, 0.6); /* طبقة إضاءة بيضاء خفيفة */
-    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-    color: black; /* اللون يتغير إلى أسود (يبقى أسود فعلياً من اللون الأساسي) */
+    font-weight: bold; /* يصبح عريضًا عند التمرير (من الكود الأول) */
+    text-shadow: 0 0 20px #007bff, 0 0 30px #007bff; /* تأثير إضاءة أزرق أقوى (من الكود الأول) */
+    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر (من الكود الأول) */
+    color: #00aaff; /* اللون يتغير قليلاً عند الإضاءة لزيادة الجاذبية البصرية (من الكود الأول) */
 }
