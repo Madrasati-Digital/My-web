@@ -1,31 +1,31 @@
 body {
     font-family: 'Arial', sans-serif;
-    display: flex; /* لتمكين توسيط المحتوى رأسيًا وأفقيًا */
-    justify-content: center; /* توسيط أفقي للعناصر داخل الـ body */
-    align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
-    min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة ليعمل التوسيط الرأسي */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4; /* لون خلفية خفيف */
-    flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً */
+    background-color: #f4f4f4;
+    flex-direction: column;
 }
 
-/* قواعد الصورة: لتكون صغيرة وفي الأعلى وموسطة */
+/* قواعد الصورة */
 #my-top-image {
-    width: 300px; /* حجم الصورة صغير (300 بكسل عرض) */
-    height: auto; /* للحفاظ على نسبة الأبعاد الصحيحة للصورة */
-    display: block; /* لجعل الصورة عنصر كتلة لسهولة التوسيط */
-    margin-left: auto; /* لتوسيطها أفقياً */
-    margin-right: auto; /* لتوسيطها أفقياً */
-    margin-bottom: 20px; /* مسافة أسفل الصورة */
-    border-radius: 10px; /* حواف دائرية خفيفة للصورة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
-    transition: all 0.3s ease-in-out; /* حركة سلسة لأي تغييرات */
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
-/* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
+/* قواعد الرابط <a> الذي يحمل كلاس highlight-text */
 .highlight-text {
     text-decoration: none; /* لإزالة الخط السفلي من الرابط */
-    color: black; /* لون الكلمة أسود كما طلبت */
+    color: black; /* لون الكلمة أسود (اللون الأساسي) */
     font-size: 2.5em; /* حجم الخط للكلمة */
     transition: font-weight 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out; /* انتقال سلس لجميع التأثيرات */
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
@@ -40,5 +40,5 @@ body {
         0 0 30px rgba(255, 255, 255, 0.8), /* طبقة إضاءة بيضاء متوسطة */
         0 0 40px rgba(255, 255, 255, 0.6); /* طبقة إضاءة بيضاء خفيفة */
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-    color: black; /* هنا نضمن أن اللون يبقى أسود عند التمرير كما طلبت */
+    color: black; /* اللون يتغير إلى أسود (يبقى أسود فعلياً من اللون الأساسي) */
 }
