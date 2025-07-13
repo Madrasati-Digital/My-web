@@ -1,48 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #FFFFFF; /* لون الخلفية أبيض خالص */
-    text-align: center;
-    flex-direction: column;
+"body": {
+"font-family": "Arial, sans-serif",
+"display": "flex",
+"justify-content": "center",
+"align-items": "center",
+"min-height": "100vh",
+"margin": 0,
+"background-color": "#FFFFFF",
+"text-align": "center",
+"flex-direction": "column"
+},
+".small-image": {
+"width": "120px",
+"height": "150px",
+"object-fit": "cover",
+"margin-bottom": "20px",
+"display": "block",
+"margin-left": "auto",
+"margin-right": "auto"
+},
+"h1, h2": {
+"color": "#000000",
+"font-size": "18px",
+"margin-bottom": "10px",
+"transition": "font-size 0.2s ease-in-out, box-shadow 0.2s ease-in-out"
+},
+"h1:hover, h2:hover": {
+"font-size": "20px",
+"box-shadow": "0 0 10px rgba(0, 123, 255, 0.8)" /* إضاءة زرقاء حول النص */
 }
-
-/* إذا كنت لا تريد المربع الأبيض، تأكد أن هذا الجزء محذوف أو معلق بالكامل */
-/*
-.container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 90%;
-}
-*/
-
-.small-image {
-    width: 120px; /* حجم الصورة مكبر قليلاً */
-    height: 150px; /* حسب آخر تعديل طلبته */
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* **هذا هو الجزء الخاص بالتنسيقات الأساسية لـ h1 و h2** */
-h1, h2 {
-    color: #000000; /* لون الخط أسود خالص */
-    font-size: 18px; /* حجم الخط الأساسي */
-    margin-bottom: 10px;
-    /* **هنا الأهم:** transition يجب أن يشمل كل من color و font-size ليكون الانتقال سلسًا في كليهما */
-    transition: color 0.3s ease, font-size 0.3s ease;
-}
-
-/* **هذا هو الجزء الخاص بالتأثير عند وضع الماوس (hover) - يجب أن يكون قاعدة منفصلة** */
-h1:hover, h2:hover {
-    color: #FFFF00; /* اللون الذي يتغير إليه الخط عند التمرير (أصفر فاقع) */
-    font-size: 20px; /* **هنا تم إضافة تكبير الحجم قليلاً عند التمرير** (20px أكبر من 18px) */
 }
