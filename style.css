@@ -9,26 +9,26 @@ body {
 
 /* هذه القواعد خاصة بالصورة */
 #my-top-image {
-    width: 300px; /* جعل عرض الصورة 300 بكسل (اجعلها أصغر) */
+    width: 300px; /* هذا سيجعل عرض الصورة 300 بكسل */
     height: auto; /* للحفاظ على نسبة الأبعاد */
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    border-radius: 10px; /* لإضافة حواف دائرية خفيفة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
-    transition: all 0.3s ease-in-out; /* لجعل أي تغييرات مستقبلية سلسة */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 /* تأثير الوميض/التوهج عند وضع الماوس على العنوان الرئيسي H1 */
 h1 {
-    color: #007bff; /* اللون الأصلي */
-    font-size: 2.5em; /* حجم الخط */
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* لجعل الانتقال سلساً */
+    color: #007bff;
+    font-size: 2.5em;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 h1:hover {
-    color: #ff9900; /* لون مختلف عند التوهج */
-    text-shadow: 0 0 15px rgba(255, 153, 0, 0.7); /* تأثير التوهج */
-    cursor: pointer; /* لتغيير شكل المؤشر إلى يد عند المرور فوقه */
+    color: #ff9900;
+    text-shadow: 0 0 15px rgba(255, 153, 0, 0.7);
+    cursor: pointer;
 }
