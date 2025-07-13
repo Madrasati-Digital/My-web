@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center; /* توسيط أفقي للعناصر داخل الـ body */
-    align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
+    align-items: flex-start; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
     background-color: #f0f0f0; /* لون خلفية خفيف */
