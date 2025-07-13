@@ -5,7 +5,7 @@ body {
     align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
     min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
     margin: 0;
-    background-color: #EEEEEE; /* لون خلفية خفيف */
+    background-color: #FFFFFF; /* لون خلفية خفيف */
     flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
 }
 
