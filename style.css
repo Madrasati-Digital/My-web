@@ -36,8 +36,8 @@ body {
 .highlight-text a:hover {
     font-weight: bold; /* الخط يصبح عريضاً */
     text-shadow: 
-        0 0 20px #007bff,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
-        0 0 30px #007bff;   
+        0 0 20px #FFFFFF,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
+        0 0 30px #FFFFFF;   
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
     color: black; /* اللون يبقى أسود عند التمرير */
 }
