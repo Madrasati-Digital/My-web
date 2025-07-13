@@ -1,52 +1,21 @@
 body {
-
-    font-family: 'Arial', sans-serif;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    min-height: 100vh;
-
-    margin: 0;
-
-    background-color: #f0f0f0;
-
+    font-family: Arial, sans-serif;
+    text-align: center; /* هذا سيقوم بتوسيط العناصر النصية والصور */
+    color: #333;
+    margin: 0; /* تأكد أن لا يوجد هوامش إضافية */
+    padding: 20px; /* يمكن إضافة بعض البادئة لتبدو أفضل */
 }
 
-.highlight-text {
-
-    text-align: center;
-
+/* هذه القواعد خاصة بالصورة التي أعطيتها ID "my-top-image" في HTML */
+#my-top-image {
+    max-width: 100%; /* لضمان أنها لا تتجاوز عرض الشاشة */
+    height: auto; /* للحفاظ على نسبة الأبعاد */
+    display: block; /* لجعلها تتصرف كعنصر كتلة وتسمح بـ margin: auto */
+    margin-left: auto; /* لتوسيطها أفقياً */
+    margin-right: auto; /* لتوسيطها أفقياً */
+    margin-bottom: 20px; /* إضافة مسافة أسفل الصورة */
 }
 
-.highlight-text a {
-
-    color: #007bff; /* اللون الأزرق الجميل الافتراضي للرابط */
-
-    font-size: 3em; /* حجم الخط للرابط */
-
-    text-decoration: none; /* إزالة التسطير الافتراضي للروابط */
-
-    transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير ولإزالة التمرير */
-
-    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير (لإشارة أنه قابل للضغط) */
-
-    display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
-
+h1 {
+    color: #007bff;
 }
-
-.highlight-text a:hover {
-
-    font-weight: bold; /* يصبح عريضًا عند التمرير */
-
-    text-shadow: 0 0 20px #007bff, 0 0 30px #007bff; /* تأثير إضاءة أقوى */
-
-    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-
-    color: #00aaff; /* يمكن تغيير اللون قليلاً عند الإضاءة لزيادة الجاذبية البصرية */
-
-}
-
