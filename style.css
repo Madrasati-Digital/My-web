@@ -1,52 +1,29 @@
 body {
-
     font-family: 'Arial', sans-serif;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     min-height: 100vh;
-
     margin: 0;
-
     background-color: #f0f0f0;
-
 }
 
 .highlight-text {
-
     text-align: center;
-
 }
 
 .highlight-text a {
-
     color: #007bff; /* اللون الأزرق الجميل الافتراضي للرابط */
-
     font-size: 3em; /* حجم الخط للرابط */
-
     text-decoration: none; /* إزالة التسطير الافتراضي للروابط */
-
     transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير ولإزالة التمرير */
-
     cursor: pointer; /* لإظهار مؤشر اليد عند التمرير (لإشارة أنه قابل للضغط) */
-
     display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
-
 }
 
 .highlight-text a:hover {
-
     font-weight: bold; /* يصبح عريضًا عند التمرير */
-
     text-shadow: 0 0 20px #007bff, 0 0 30px #007bff; /* تأثير إضاءة أقوى */
-
     transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-
     color: #00aaff; /* يمكن تغيير اللون قليلاً عند الإضاءة لزيادة الجاذبية البصرية */
-
 }
-
