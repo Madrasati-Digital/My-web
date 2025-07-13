@@ -1,43 +1,43 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center; /* توسيط أفقي للعناصر داخل الـ body */
-    align-items: center; /* توسيط رأسي للعناصر داخل الـ body */
-    min-height: 100vh; /* جعل الـ body يغطي كامل ارتفاع الشاشة */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* يجعل الصفحة تأخذ ارتفاع الشاشة بالكامل */
     margin: 0;
-    background-color: #f0f0f0; /* لون خلفية خفيف */
-    flex-direction: column; /* لترتيب العناصر (الصورة ثم الكلمة) عمودياً ثم توسيطها */
+    background-color: #f4f4f4; /* لون خلفية خفيف */
+    text-align: center; /* لضمان توسيط النصوص */
+    flex-direction: column; /* لترتيب العناصر عموديا */
 }
 
-/* قواعد الصورة: لتكون صغيرة وفي الأعلى وموسطة */
-#my-top-image {
-    width: 200px; /* حجم الصورة صغير (200 بكسل عرض) */
-    height: auto; /* للحفاظ على نسبة الأبعاد الصحيحة للصورة */
-    display: block; /* لجعل الصورة عنصر كتلة لسهولة التوسيط */
-    margin-left: auto; /* لتوسيطها أفقياً */
-    margin-right: auto; /* لتوسيطها أفقياً */
-    margin-bottom: 20px; /* مسافة أسفل الصورة */
-    border-radius: 10px; /* حواف دائرية خفيفة للصورة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
-    transition: all 0.3s ease-in-out; /* حركة سلسة لأي تغييرات */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* تحديد أقصى عرض للحاوية */
+    width: 90%; /* تجعل الحاوية متجاوبة */
 }
 
-/* القواعد المطبقة على الرابط <a> الذي يحمل كلاس highlight-text */
-.highlight-text a { /* هذا الكلاس مطبق على وسم <a> */
-    color: black; /* لون الكلمة أسود */
-    font-size: 2em; /* حجم الخط أصغر */
-    text-decoration: none; /* إزالة الخط السفلي من الرابط */
-    transition: all 0.3s ease; /* لجعل التغيير ناعمًا عند التمرير */
-    cursor: pointer; /* لإظهار مؤشر اليد عند التمرير */
-    display: inline-block; /* مهم للسماح لـ 'transform' بالعمل بشكل صحيح */
+.small-image {
+    width: 100px; /* حجم صغير للصورة */
+    height: 100px; /* حجم صغير للصورة */
+    /* إذا كنت تريدها دائرية، أزل التعليق عن السطر التالي */
+    /* border-radius: 50%; */
+    object-fit: cover; /* لضمان أن الصورة تملأ المساحة دون تشوه */
+    margin-bottom: 20px; /* مسافة تحت الصورة */
+    display: block; /* لجعل الصورة تأخذ سطر خاص بها */
+    margin-left: auto; /* لتوسيط الصورة */
+    margin-right: auto; /* لتوسيط الصورة */
 }
 
-/* تأثير عند تمرير الماوس فوق الكلمة (الرابط) */
-.highlight-text a:hover {
-    font-weight: bold; /* الخط يصبح عريضاً */
-    text-shadow: 
-        0 0 20px #007bff,   /* **عدنا إلى الوميض الأزرق الذي كان يعمل** */
-        0 0 30px #007bff;   
-    transform: scale(1.1); /* يكبر قليلاً ليبرز بشكل أكبر */
-    color: black; /* اللون يبقى أسود عند التمرير */
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 5px;
 }
