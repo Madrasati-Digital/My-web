@@ -1,16 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center; /* هذا سيقوم بتوسيط العناصر النصية والصور */
+    text-align: center;
     color: #333;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4; /* لون خلفية خفيف */
+    background-color: #f4f4f4;
 }
 
 /* هذه القواعد خاصة بالصورة */
 #my-top-image {
-    width: 300px; /* هذا سيجعل عرض الصورة 300 بكسل */
-    height: auto; /* للحفاظ على نسبة الأبعاد */
+    width: 300px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -20,15 +20,25 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* تأثير الوميض/التوهج عند وضع الماوس على العنوان الرئيسي H1 */
-h1 {
-    color: #007bff;
-    font-size: 2.5em;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+/* تنسيق الرابط الذي يحيط بالـ H1 */
+a {
+    text-decoration: none; /* لإزالة الخط التلقائي تحت الرابط */
+    color: inherit; /* لجعل لون الرابط يأخذ لون العنصر الذي يحيط به (في حالتنا H1) */
 }
 
+/* قواعد العنوان الرئيسي H1 */
+h1 {
+    color: #007bff; /* اللون الأصلي للعنوان */
+    font-size: 2.5em;
+    /* لتطبيق انتقال سلس لتغير اللون والظل وسمك الخط */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+}
+
+/* تأثيرات عند تمرير الماوس فوق العنوان H1 */
 h1:hover {
-    color: #ff9900;
-    text-shadow: 0 0 15px rgba(255, 153, 0, 0.7);
-    cursor: pointer;
+    color: #007bff; /* اللون يبقى نفسه كما طلبت */
+    font-weight: bold; /* الخط يصبح عريضاً */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), /* وميض أبيض واضح */
+                 0 0 25px rgba(255, 255, 255, 0.6); /* طبقة وميض إضافية */
+    cursor: pointer; /* لتغيير شكل المؤشر إلى يد */
 }
