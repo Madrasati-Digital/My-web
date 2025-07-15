@@ -1,108 +1,69 @@
-/* الأنماط العامة لـ body التي كانت لديك */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #FFFFFF; /* لون الخلفية أبيض خالص */
-    text-align: center;
-    flex-direction: column;
-}
+/* ... كود الـ CSS السابق الذي لا علاقة له بالقائمة المنسدلة (مثل body و .small-image) ... */
 
-/* الأنماط العامة للروابط التي كانت لديك */
-a {
-    text-decoration: none; /* لإزالة الخط السفلي من جميع الروابط */
-    color: inherit;         /* لجعل الروابط ترث لون النص الأصلي (الأسود في هذه الحالة) */
-}
 
-/* الأنماط العامة للصورة التي كانت لديك */
-.small-image {
-    width: 120px; /* حجم الصورة مكبر قليلاً */
-    height: 150px; /* حسب آخر تعديل طلبته */
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* **الأنماط الجديدة للقائمة المنسدلة** */
+/* **الأنماط الخاصة بالقائمة المنسدلة - ركز جيداً على هذه الأجزاء** */
 
 /* حاوية القائمة المنسدلة */
 .dropdown {
     position: relative; /* مهم جداً: يجعل المحتوى المنسدل يتموضه بالنسبة لهذه الحاوية */
     display: inline-block; /* يسمح للعنصر بأخذ حجم المحتوى فقط */
+    /* **أضف أو تأكد من وجود هذه الخاصية:** */
+    z-index: 1000; /* قيمة عالية جداً لتضمن أن الـ dropdown يظهر فوق أي شيء آخر في الصفحة */
 }
 
 /* زر القائمة الرئيسي */
 .dropbtn {
-    background-color: #4CAF50; /* لون خلفية للزر */
-    color: white; /* لون النص */
-    padding: 16px; /* مسافة داخلية للزر */
-    font-size: 16px; /* حجم الخط */
-    border: none; /* إزالة الحدود */
-    cursor: pointer; /* تغيير شكل المؤشر ليد */
-    border-radius: 5px; /* حواف دائرية */
-    transition: background-color 0.3s ease; /* انتقال ناعم للون الخلفية */
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .dropbtn:hover {
-    background-color: #45a049; /* تغيير لون الخلفية عند التمرير */
+    background-color: #45a049;
 }
-
 
 /* المحتوى المنسدل (الروابط) */
 .dropdown-content {
-    display: none; /* مهم جداً: إخفاء المحتوى بشكل افتراضي */
-    position: absolute; /* مهم جداً: يتموضع بشكل مطلق بالنسبة لـ .dropdown */
-    background-color: #f9f9f9; /* لون خلفية للقائمة المنسدلة */
-    min-width: 250px; /* عرض أدنى للقائمة */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* ظل خفيف */
-    z-index: 1; /* يضمن أن تظهر القائمة فوق المحتوى الآخر */
+    display: none; /* إخفاء المحتوى بشكل افتراضي */
+    position: absolute; /* يتموضع بشكل مطلق بالنسبة لـ .dropdown */
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* **تأكد من z-index هنا أيضاً. يجب أن يكون له قيمة. 1 أو 2 كافية عادةً، لكن لا تتركه فارغاً.** */
+    z-index: 1; /* يجب أن تكون قيمة، أقل من .dropdown إذا كانت مشكلة التداخل من عنصر أبعد */
+                /* ولكن مع z-index: 1000 على .dropdown، هذا غالباً لن يكون المشكل */
     border-radius: 5px;
-    padding: 10px 0; /* مسافة داخلية علوية وسفلية */
-    margin-top: 5px; /* مسافة بين الزر والقائمة المنسدلة */
-    text-align: right; /* محاذاة النص لليمين داخل القائمة */
+    padding: 10px 0;
+    margin-top: 5px;
+    text-align: right;
+    /* **إضافة مهمة لمعالجة المشاكل المحتملة:** */
+    overflow: hidden; /* يضمن أن أي محتوى زائد يتم قصه ولا يسبب مشاكل تداخل */
 }
 
 /* تنسيق الروابط داخل القائمة المنسدلة */
 .dropdown-content a {
-    color: black; /* لون نص الروابط */
-    padding: 12px 16px; /* مسافة داخلية للروابط */
+    color: black;
+    padding: 12px 16px; /* مسافة داخلية للروابط لجعلها أسهل للضغط */
     text-decoration: none;
-    display: block; /* يجعل الرابط يأخذ عرض سطر كامل ليكون سهل الضغط */
-    text-align: right; /* محاذاة النص لليمين */
-    transition: background-color 0.2s ease; /* انتقال ناعم للخلفية */
+    display: block; /* مهم جداً: يجعل الرابط يأخذ عرض سطر كامل ليكون سهل الضغط */
+    text-align: right;
+    transition: background-color 0.2s ease;
+    /* **إضافات مهمة جداً لضمان قابلية النقر:** */
+    line-height: 1.5; /* يزيد ارتفاع السطر قليلاً لسهولة النقر */
+    box-sizing: border-box; /* يضمن أن padding لا يزيد عرض العنصر عن min-width المحدد */
 }
 
 /* تغيير لون الروابط عند التمرير عليها */
 .dropdown-content a:hover {
-    background-color: #ddd; /* لون خلفية عند التمرير */
+    background-color: #ddd;
 }
 
 /* إظهار القائمة المنسدلة عند التمرير على الحاوية الرئيسية */
 .dropdown:hover .dropdown-content {
     display: block; /* إظهار القائمة عندما يتم التمرير على .dropdown */
 }
-
-/* يمكنك إزالة أنماط h1, h2 القديمة إذا لم تعد تستخدمها لعناوين منفصلة */
-/* h1, h2 {
-    color: #000000;
-    font-size: 18px;
-    margin-bottom: 10px;
-    transition: font-size 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
-}
-
-h1:hover {
-    font-size: 20px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
-    cursor: pointer;
-}
-
-h2:hover {
-    font-size: 20px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
-    cursor: pointer;
-} */
