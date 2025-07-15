@@ -30,8 +30,8 @@ h1, h2 {
     color: #000000; /* لون الخط أسود خالص */
     font-size: 22px; /* حجم الخط الأساسي */
     margin-bottom: 10px;
-    /* تسريع الانتقال إلى 0.15s وتضمين text-shadow */
-    transition: font-size 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+    /* تسريع الانتقال إلى 0.10s وتضمين text-shadow */
+    transition: font-size 0.10s ease-in-out, text-shadow 0.10s ease-in-out;
 }
 
 /* **هذا هو الجزء الخاص بتأثير التمرير للكلمة الأولى (h1) - إضاءة ذهبية قوية جداً** */
