@@ -1,3 +1,4 @@
+/* الأنماط العامة لـ body التي كانت لديك */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -10,15 +11,16 @@ body {
     flex-direction: column;
 }
 
-/* **أضفت هذا الجزء الجديد لإزالة الخط ولون الروابط الافتراضي** */
+/* الأنماط العامة للروابط التي كانت لديك */
 a {
     text-decoration: none; /* لإزالة الخط السفلي من جميع الروابط */
-    color: inherit;        /* لجعل الروابط ترث لون النص الأصلي (الأسود في هذه الحالة) */
+    color: inherit;         /* لجعل الروابط ترث لون النص الأصلي (الأسود في هذه الحالة) */
 }
 
+/* الأنماط العامة للصورة التي كانت لديك */
 .small-image {
-    width: 150px; /* حجم الصورة مكبر قليلاً */
-    height: 180px; /* حسب آخر تعديل طلبته */
+    width: 120px; /* حجم الصورة مكبر قليلاً */
+    height: 150px; /* حسب آخر تعديل طلبته */
     object-fit: cover;
     margin-bottom: 20px;
     display: block;
@@ -26,32 +28,81 @@ a {
     margin-right: auto;
 }
 
-h1, h2 {
-    color: #000000; /* لون الخط أسود خالص */
-    font-size: 22px; /* حجم الخط الأساسي */
+/* **الأنماط الجديدة للقائمة المنسدلة** */
+
+/* حاوية القائمة المنسدلة */
+.dropdown {
+    position: relative; /* مهم جداً: يجعل المحتوى المنسدل يتموضه بالنسبة لهذه الحاوية */
+    display: inline-block; /* يسمح للعنصر بأخذ حجم المحتوى فقط */
+}
+
+/* زر القائمة الرئيسي */
+.dropbtn {
+    background-color: #4CAF50; /* لون خلفية للزر */
+    color: white; /* لون النص */
+    padding: 16px; /* مسافة داخلية للزر */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير شكل المؤشر ليد */
+    border-radius: 5px; /* حواف دائرية */
+    transition: background-color 0.3s ease; /* انتقال ناعم للون الخلفية */
+}
+
+.dropbtn:hover {
+    background-color: #45a049; /* تغيير لون الخلفية عند التمرير */
+}
+
+
+/* المحتوى المنسدل (الروابط) */
+.dropdown-content {
+    display: none; /* مهم جداً: إخفاء المحتوى بشكل افتراضي */
+    position: absolute; /* مهم جداً: يتموضع بشكل مطلق بالنسبة لـ .dropdown */
+    background-color: #f9f9f9; /* لون خلفية للقائمة المنسدلة */
+    min-width: 250px; /* عرض أدنى للقائمة */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* ظل خفيف */
+    z-index: 1; /* يضمن أن تظهر القائمة فوق المحتوى الآخر */
+    border-radius: 5px;
+    padding: 10px 0; /* مسافة داخلية علوية وسفلية */
+    margin-top: 5px; /* مسافة بين الزر والقائمة المنسدلة */
+    text-align: right; /* محاذاة النص لليمين داخل القائمة */
+}
+
+/* تنسيق الروابط داخل القائمة المنسدلة */
+.dropdown-content a {
+    color: black; /* لون نص الروابط */
+    padding: 12px 16px; /* مسافة داخلية للروابط */
+    text-decoration: none;
+    display: block; /* يجعل الرابط يأخذ عرض سطر كامل ليكون سهل الضغط */
+    text-align: right; /* محاذاة النص لليمين */
+    transition: background-color 0.2s ease; /* انتقال ناعم للخلفية */
+}
+
+/* تغيير لون الروابط عند التمرير عليها */
+.dropdown-content a:hover {
+    background-color: #ddd; /* لون خلفية عند التمرير */
+}
+
+/* إظهار القائمة المنسدلة عند التمرير على الحاوية الرئيسية */
+.dropdown:hover .dropdown-content {
+    display: block; /* إظهار القائمة عندما يتم التمرير على .dropdown */
+}
+
+/* يمكنك إزالة أنماط h1, h2 القديمة إذا لم تعد تستخدمها لعناوين منفصلة */
+/* h1, h2 {
+    color: #000000;
+    font-size: 18px;
     margin-bottom: 10px;
-    /* تسريع الانتقال إلى 0.10s وتضمين text-shadow */
-    transition: font-size 0.10s ease-in-out, text-shadow 0.10s ease-in-out;
+    transition: font-size 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
 }
 
-/* **هذا هو الجزء الخاص بتأثير التمرير للكلمة الأولى (h1) - إضاءة ذهبية قوية جداً** */
 h1:hover {
-    font-size: 28px; /* تكبير الحجم قليلاً عند التمرير */
-    /* ظلال نص متعددة لإضاءة قوية جداً */
-    text-shadow:
-        0 0 10px rgba(255, 215, 0, 0.8),   /* طبقة إضاءة أقرب وأكثر عتامة */
-        0 0 20px rgba(255, 215, 0, 0.6),   /* طبقة إضاءة متوسطة */
-        0 0 40px rgba(255, 215, 0, 0.4);   /* طبقة إضاءة أوسع وأكثر شفافية */
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
     cursor: pointer;
 }
 
-/* **وهذا هو الجزء الخاص بتأثير التمرير للكلمة الثانية (h2) - إضاءة ذهبية/برتقالية قوية جداً** */
 h2:hover {
-    font-size: 28px; /* تكبير الحجم قليلاً عند التمرير */
-    /* ظلال نص متعددة لإضاءة قوية جداً بلون مختلف */
-    text-shadow:
-        0 0 10px rgba(255, 215, 0, 0.8),
-        0 0 20px rgba(255, 215, 0, 0.6),
-        0 0 40px rgba(255, 215, 0, 0.4);
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
     cursor: pointer;
-}
+} */
